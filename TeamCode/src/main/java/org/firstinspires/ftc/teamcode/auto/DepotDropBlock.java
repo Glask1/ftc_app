@@ -86,7 +86,7 @@ public class DepotDropBlock extends LinearOpMode {
             robot.drive.move2(-20);
 
         } else if(NEW_ANGLE > -80) {
-            robot.drive.move2(-35.5);
+            robot.drive.move2(-45.5);
             sleep(100);
             robot.drive.turn(-(robot.gyro.getContinuosAngle() - (START_ANGLE - 135)));
             robot.drive.move2(-20);
@@ -104,6 +104,8 @@ public class DepotDropBlock extends LinearOpMode {
         robot.marker.setPosition(1);
 
         requestOpModeStop();
+
+        robot.marker.setPosition(1);
 
     }
 
