@@ -8,8 +8,9 @@ import com.qualcomm.robotcore.util.ElapsedTime;
 import org.firstinspires.ftc.teamcode.Robot;
 import org.firstinspires.ftc.teamcode.utils.PID;
 
-@Autonomous(name = "CraterDropNoBlock")
 @Disabled
+
+//@Autonomous(name = "CraterDropNoBlock")
 public class CraterDropNoBlock extends LinearOpMode {
 
     @Override

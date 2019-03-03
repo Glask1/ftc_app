@@ -8,8 +8,9 @@ import org.firstinspires.ftc.teamcode.subsystems.vision.InvictaCV;
 import org.firstinspires.ftc.teamcode.subsystems.vision.InvictaCVHull;
 import org.invictarobotics.invictavision.CameraViewDisplay;
 
-@Autonomous(name = "OpenCV2 only")
 @Disabled
+
+//@Autonomous(name = "OpenCV2 only")
 public class OpenCV2 extends LinearOpMode {
 
     @Override

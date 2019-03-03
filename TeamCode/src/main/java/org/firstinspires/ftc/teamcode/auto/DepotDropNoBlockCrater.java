@@ -6,8 +6,9 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 
 import org.firstinspires.ftc.teamcode.Robot;
 
-@Autonomous(name = "DepoDropNoBlockCrater")
 @Disabled
+
+//@Autonomous(name = "DepoDropNoBlockCrater")
 
 public class DepotDropNoBlockCrater extends LinearOpMode {
 

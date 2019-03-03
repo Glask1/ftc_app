@@ -6,9 +6,8 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 
 import org.firstinspires.ftc.teamcode.subsystems.vision.InvictaCV;
 import org.invictarobotics.invictavision.CameraViewDisplay;
-
-@Autonomous(name = "OpenCV only")
 @Disabled
+//@Autonomous(name = "OpenCV only")
 public class OpenCV extends LinearOpMode {
 
     @Override

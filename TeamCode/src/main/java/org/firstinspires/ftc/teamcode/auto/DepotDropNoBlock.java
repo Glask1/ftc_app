@@ -8,8 +8,8 @@ import com.qualcomm.robotcore.util.ElapsedTime;
 import org.firstinspires.ftc.teamcode.Robot;
 import org.firstinspires.ftc.teamcode.utils.PID;
 
-@Autonomous(name = "DepoDropNoBlock")
 @Disabled
+//@Autonomous(name = "DepoDropNoBlock")
 public class DepotDropNoBlock extends LinearOpMode {
 
     @Override

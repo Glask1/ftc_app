@@ -9,9 +9,9 @@ import org.firstinspires.ftc.teamcode.Robot;
 import org.firstinspires.ftc.teamcode.subsystems.vision.InvictaCVHull;
 import org.firstinspires.ftc.teamcode.utils.PID;
 import org.invictarobotics.invictavision.CameraViewDisplay;
-
-@Autonomous(name="pidMove")
 @Disabled
+
+//@Autonomous(name="pidMove")
 public class VisionTestOnly extends LinearOpMode {
     @Override
     public void runOpMode() {

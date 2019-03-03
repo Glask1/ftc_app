@@ -39,7 +39,7 @@ public class CraterDropBlock  extends LinearOpMode {
 
         robot.drive.strafe('l', .5);
 
-        robot.drive.turn(-115);
+        robot.drive.turn(-55);
 
         ElapsedTime elapsedTime = new ElapsedTime();
         elapsedTime.startTime();
@@ -47,6 +47,7 @@ public class CraterDropBlock  extends LinearOpMode {
         PID pid = new PID(0.0014,0.00267,0.00049);
         pid.setLimits(-1, 1);
         double error;
+        double i =-1;
 
         while(opModeIsActive() && !isStopRequested()) {
             if(invictaCV.found) {
@@ -64,7 +65,13 @@ public class CraterDropBlock  extends LinearOpMode {
                 telemetry.addData("area", invictaCV.area);
                 telemetry.update();
             } else {
-                robot.drive.angularVelocity(45);
+                if(robot.gyro.getContinuosAngle() < -150 && i == -1) {
+                    i = 1;
+                }
+                if(robot.gyro.getContinuosAngle() > -35 && i == 1) {
+                    i = -1;
+                }
+                robot.drive.angularVelocity(i*35);
             }
         }
 
@@ -88,7 +95,7 @@ public class CraterDropBlock  extends LinearOpMode {
         } else if(NEW_ANGLE > -80) {
             robot.drive.move2(-31.5);
             sleep(100);
-            robot.drive.move2(23.75);
+            robot.drive.move2(17);
             robot.drive.turn(-(robot.gyro.getContinuosAngle() - START_ANGLE ));
             robot.drive.move2(-45);
 
@@ -108,6 +115,14 @@ public class CraterDropBlock  extends LinearOpMode {
         robot.drive.move2(-50);
 
         robot.marker.setPosition(1);
+
+        elapsedTime.reset();
+
+        while(elapsedTime.seconds() < 2 && opModeIsActive() && !isStopRequested()) {
+
+        }
+
+        robot.drive.move2(12);
 
         robot.gyro.stop();
 
