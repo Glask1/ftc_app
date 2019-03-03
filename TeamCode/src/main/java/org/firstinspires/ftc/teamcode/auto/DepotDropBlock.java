@@ -40,7 +40,7 @@ public class DepotDropBlock extends LinearOpMode {
 
         robot.drive.strafe('l', .5);
 
-        robot.drive.turn(-115);
+        robot.drive.turn(-55);
 
         ElapsedTime elapsedTime = new ElapsedTime();
         elapsedTime.startTime();
@@ -65,7 +65,7 @@ public class DepotDropBlock extends LinearOpMode {
                 telemetry.addData("area", invictaCV.area);
                 telemetry.update();
             } else {
-                robot.drive.angularVelocity(45);
+                robot.drive.angularVelocity(-45);
             }
         }
 
